@@ -1,22 +1,23 @@
 // ===========================================
 // ==================================MESH FILE
 // ===========================================
+f = 6.5;
+h = 0.3/f;
+H = 0.2/f;
 
-h = 0.1;
-H = 1;
 // =====================================POINTS
-Point(1) = {-18,0,0,h};
-Point(2) = {0,0,0,h};
-Point(3) = {2.1,0,0,h};
-Point(4) = {2.1,3.25,0,h};
-//Point(4) = {2.1,3.2765,0,h};
-Point(5) = {0,3,0,h};
-Point(6) = {-18,4,0,h};
-Point(7) = {-10,3.25,0,h};
-Point(8) = {60,0,0,H};
-Point(9) = {60,3.25,0,H};
-Point(10) = {60,6.5,0,H};
-Point(11) = {2.1,6.5,0,H};
+Point(1) = {-15/f,0,0,h};
+Point(2) = {-2.1/f,0,0,h};
+Point(3) = {0,0,0,h};
+Point(4) = {0,3.25/f,0,h};
+//Point(4) = {0,3.2765,0,h};
+Point(5) = {-2.1/f,3/f,0,h};
+Point(6) = {-15/f,6/f,0,h};
+Point(7) = {-8/f,4/f,0,h};
+Point(8) = {65/f,0,0,H};
+Point(9) = {65/f,3.25/f,0,H};
+Point(10) = {65/f,6.5/f,0,H};
+Point(11) = {0,6.5/f,0,H};
 // =====================================CURVES
 
 Line(1) = {1,2};
@@ -35,14 +36,24 @@ Line(12) = {9,4};
 // =====================================LOOPS
 
 Line Loop(1) = {1,2,3,4,5,6};
+
+
+Transfinite Line{3} = 40 Using Progression 1.05;
+Transfinite Line{8} = 40 Using Progression 1.05;
+Transfinite Line{7} = 200  Using Progression 1.05;
+Transfinite Line{12} = 200 Using Progression 1/1.05;
 Line Loop(2) = {7,8,12,-3};
+Plane Surface(2) = {2};
+Transfinite Surface{2};
+Recombine Surface{2};
+
 Line Loop(3) = {9,10,11,-12};
 
 
 // =====================================SURFS
 
 Plane Surface(1) = {1};
-Plane Surface(2) = {2};
+//Plane Surface(2) = {2};
 Plane Surface(3) = {3};
 
 Physical Surface(1) = {1,2,3};
