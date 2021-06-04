@@ -38,14 +38,14 @@ Line(12) = {9,4};
 Line Loop(1) = {1,2,3,4,5,6};
 
 
-Transfinite Line{3} = 40 Using Progression 1.05;
-Transfinite Line{8} = 40 Using Progression 1.05;
-Transfinite Line{7} = 200  Using Progression 1.05;
-Transfinite Line{12} = 200 Using Progression 1/1.05;
+//Transfinite Line{3} = 40 Using Progression 1.05;
+//Transfinite Line{8} = 40 Using Progression 1.05;
+//Transfinite Line{7} = 300  Using Progression 1.05;
+//Transfinite Line{12} = 300 Using Progression 1/1.05;
 Line Loop(2) = {7,8,12,-3};
 Plane Surface(2) = {2};
-Transfinite Surface{2};
-Recombine Surface{2};
+//Transfinite Surface{2};
+//Recombine Surface{2};
 
 Line Loop(3) = {9,10,11,-12};
 
@@ -57,7 +57,8 @@ Plane Surface(1) = {1};
 Plane Surface(3) = {3};
 
 Physical Surface(1) = {1,2,3};
-Physical Line("WALL") = {10,11,4,5};
+Physical Line("WALL") = {4,5,10,11};
+//Physical Line("FARFIELD") = {10,11};
 Physical Line("INLET") = {6};
 Physical Line("OUTLET") = {8,9};
 Physical Line("SYMMETRY") = {1,2,7};

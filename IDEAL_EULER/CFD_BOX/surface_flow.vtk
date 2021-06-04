@@ -1,0 +1,39 @@
+# vtk DataFile Version 3.0
+vtk output
+ASCII
+DATASET UNSTRUCTURED_GRID
+POINTS 0 double
+
+CELLS 0	0
+
+CELL_TYPES 0
+
+POINT_DATA 0
+
+SCALARS Density double 1
+LOOKUP_TABLE default
+
+VECTORS Momentum double
+
+SCALARS Energy double 1
+LOOKUP_TABLE default
+
+SCALARS Pressure double 1
+LOOKUP_TABLE default
+
+SCALARS Temperature double 1
+LOOKUP_TABLE default
+
+SCALARS Mach double 1
+LOOKUP_TABLE default
+
+SCALARS Pressure_Coefficient double 1
+LOOKUP_TABLE default
+
+SCALARS Residual_Density double 1
+LOOKUP_TABLE default
+
+VECTORS Residual_Momentum double
+
+SCALARS Residual_Energy double 1
+LOOKUP_TABLE default

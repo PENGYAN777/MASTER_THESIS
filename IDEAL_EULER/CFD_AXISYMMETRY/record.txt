@@ -1,0 +1,16 @@
+	T	P	V   T/F
+// change velocity,
+case -1	270.5	100430	50	F
+case 0	270.5	100430	100	T
+case 1  270.5	100430  200 	T (standard)
+case 2  270.5	100430	250 	F
+//change pressure
+case 3	273	150000	200	T
+case 4	273	140000	200	T
+case 5	273	130000	200	T	normal, vortex cores, 3.1,  1,6
+case 6  273	120000	200	F
+case 6.1 273	118000	200	T	normal, vortex cores, 3.55, 1,56
+case 7	273	115000	200	T	normal, vortex cores, 4.06, 1.55
+csae 8	273	114000	200	T	curved, vortex cores, 4.05, 1.12
+case 9  273	110000	200	T	curved, vortex cores, 3.88, 1.05
+case 10	273	105000	200	T

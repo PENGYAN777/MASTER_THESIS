@@ -1,52 +1,32 @@
 // ==================================MESH FILE
 
-h = 0.5;
+h = 0.3;
 
 // =====================================POINTS
 Point(1) = {0,0,0,h};
 Point(2) = {65,0,0,h};
-Point(3) = {65,3.25,0,h};
-Point(4) = {65,6.5,0,h};
-Point(5) = {0,6.5,0,h};
-Point(6) = {0,3.25,0,h};
+Point(3) = {65,6.5,0,h};
+Point(4) = {0,6.5,0,h};
+Point(5) = {0,3.25,0,h};
 
 // =====================================CURVES
 Line(1) = {1,2};
 Line(2) = {2,3};
 Line(3) = {3,4};
 Line(4) = {4,5};
-Line(5) = {5,6};
-Line(6) = {6,1};
-Line(7) = {3,6};
+Line(5) = {5,1};
 
 // =====================================LOOPS
-bmp = 0.1;
-Transfinite Line{1} = 100 Using Progression 1.05;
-Transfinite Line{7} = 100 Using Progression 1/1.05;
-Transfinite Line{2} = 40 Using Progression 1.05;
-Transfinite Line{6} = 40 Using Progression 1/1.05;
-
-Line Loop(1) = {1,2,7,6};
+Line Loop(1) = {1,2,3,4,5};
 Plane Surface(1) = {1};
-Transfinite Surface{1};
-Recombine Surface{1};
-
-Transfinite Line{4} = 100 Using Progression 1/1.05;
-Transfinite Line{3} = 40 Using Progression 1.05;
-Transfinite Line{5} = 40 Using Progression 1/1.05;
-
-Line Loop(2) = {3,4,5,-7};
-Plane Surface(2) = {2};
-Transfinite Surface{2};
-Recombine Surface{2};
 
 // =====================================SURFS
 
 
-Physical Surface(1) = {1,2};
-Physical Line("WALL") = {4,5};
-Physical Line("INLET") = {6};
-Physical Line("OUTLET") = {2,3};
+Physical Surface(1) = {1};
+Physical Line("WALL") = {3,4};
+Physical Line("INLET") = {5};
+Physical Line("OUTLET") = {2};
 Physical Line("SYMMETRY") = {1};
 
 
