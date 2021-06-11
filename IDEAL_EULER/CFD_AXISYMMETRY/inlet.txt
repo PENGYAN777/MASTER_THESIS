@@ -24,3 +24,8 @@ case 10	273	105000	200	F
 case 11 280	117500	200	T	normal,v.c.	3.5,	1,44
 case 12 290 	117500	200	T	normal, v.c.	3.6	,1.44
 case 13	300	117500	200	T	curved, vortex cores,4.4, --
+
+//////////////// change V based on  case 12
+14			100	C	1.4
+15			50	C	1.4
+16			10	C	1.4

@@ -1,2 +1,0 @@
-case	number 	Inlet 			Wall		Outlet	work?	
-	0	300,100000,695		273,150000,200	150000	T

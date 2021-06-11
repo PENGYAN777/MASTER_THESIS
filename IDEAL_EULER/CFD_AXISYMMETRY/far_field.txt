@@ -1,0 +1,18 @@
+case number	T	P	Mach disk?	Defects
+-2			108000	T		1.6,0.21, bad slip line	
+-1		300	110000	T		T has small effect
+0		285	110000	T		disk better, around 1.6
+		280	117500	C		move backward
+1(candidate)	285	117500	T		no obvious v.c., Mach curves do not macth with paper
+		290	117500	C		move backward.
+2		285	120000	C		disk move backward, so maybe I should decrease the pressure
+			130000	C		1.29, nice slip line
+			140000	C		1.26, bad 
+			150000	C		C, nice slip line, 1.2 
+3		285	200000	N		many v.c.
+///////////////////// change T_0
+0		337	110000	T	1.56
+		330	110000	C	1.56
+		320		T	1.6
+		310		C	1.47,0.21
+1 		300	110000	C	1.56	
