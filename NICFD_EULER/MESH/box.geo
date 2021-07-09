@@ -1,41 +1,31 @@
-// ===========================================
 // ==================================MESH FILE
-// ===========================================
 f = 6.5;
-h = 0.3/f;
+h = 0.04;
 
 // =====================================POINTS
-Point(1) = {-15/f,0,0,h};
+Point(1) = {0,0,0,h};
 Point(2) = {65/f,0,0,h};
 Point(3) = {65/f,6.5/f,0,h};
 Point(4) = {0,6.5/f,0,h};
 Point(5) = {0,3.25/f,0,h};
-Point(6) = {-2.1/f,3/f,0,h};
-Point(7) = {-8/f,4/f,0,h};
-Point(8) = {-15/f,6/f,0,h};
-// =====================================CURVES
 
+// =====================================CURVES
 Line(1) = {1,2};
 Line(2) = {2,3};
 Line(3) = {3,4};
 Line(4) = {4,5};
-Line(5) = {5,6};
-Spline(6) = {6,7,8};
-Line(7) = {8,1};
+Line(5) = {5,1};
+
 // =====================================LOOPS
-
-Line Loop(1) = {1,2,3,4,5,6,7};
-
-
+Line Loop(1) = {1,2,3,4,5};
+Plane Surface(1) = {1};
 
 // =====================================SURFS
 
-Plane Surface(1) = {1};
 
 Physical Surface(1) = {1};
-Physical Line("WALL") = {5,6};
-Physical Line("FARFIELD") = {3,4};
-Physical Line("INLET") = {7};
+Physical Line("WALL") = {3,4};
+Physical Line("INLET") = {5};
 Physical Line("OUTLET") = {2};
 Physical Line("SYMMETRY") = {1};
 

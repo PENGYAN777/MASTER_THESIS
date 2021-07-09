@@ -3,14 +3,13 @@
 // ===========================================
 f = 6.5;
 h = 0.3/f;
-H = 0.2/f;
+H = 0.3/f;
 
 // =====================================POINTS
 Point(1) = {-15/f,0,0,h};
 Point(2) = {-2.1/f,0,0,h};
 Point(3) = {0,0,0,h};
 Point(4) = {0,3.25/f,0,h};
-//Point(4) = {0,3.2765,0,h};
 Point(5) = {-2.1/f,3/f,0,h};
 Point(6) = {-15/f,6/f,0,h};
 Point(7) = {-8/f,4/f,0,h};
@@ -38,11 +37,12 @@ Line(12) = {9,4};
 Line Loop(1) = {1,2,3,4,5,6};
 
 
-//Transfinite Line{3} = 40 Using Progression 1.05;
-//Transfinite Line{8} = 40 Using Progression 1.05;
+//Transfinite Line{3} = 80 Using Progression 1.05;
+//Transfinite Line{8} = 80 Using Progression 1.05;
 //Transfinite Line{7} = 300  Using Progression 1.05;
 //Transfinite Line{12} = 300 Using Progression 1/1.05;
 Line Loop(2) = {7,8,12,-3};
+
 Plane Surface(2) = {2};
 //Transfinite Surface{2};
 //Recombine Surface{2};
@@ -53,12 +53,11 @@ Line Loop(3) = {9,10,11,-12};
 // =====================================SURFS
 
 Plane Surface(1) = {1};
-//Plane Surface(2) = {2};
 Plane Surface(3) = {3};
 
 Physical Surface(1) = {1,2,3};
-Physical Line("WALL") = {4,5,10,11};
-//Physical Line("FARFIELD") = {10,11};
+Physical Line("WALL") = {4,5};
+Physical Line("FARFIELD") = {10,11};
 Physical Line("INLET") = {6};
 Physical Line("OUTLET") = {8,9};
 Physical Line("SYMMETRY") = {1,2,7};
