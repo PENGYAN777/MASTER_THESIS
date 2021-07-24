@@ -1,0 +1,3 @@
+1. when I use 2nd order method,  the solution diverges; but when I use 1st order method and then apply 2nd order method based 1st order solution, then it may converge.
+
+2. why sometimes, a solution seems to converge, but then diverge again.

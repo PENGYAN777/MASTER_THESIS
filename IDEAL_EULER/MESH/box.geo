@@ -1,12 +1,12 @@
 // ==================================MESH FILE
 f = 6.5;
-h = 0.04;
+h = 0.08;
 
 // =====================================POINTS
 Point(1) = {0,0,0,h};
 Point(2) = {65/f,0,0,h};
-Point(3) = {65/f,6.5/f,0,h};
-Point(4) = {0,6.5/f,0,h};
+Point(3) = {65/f,26/f,0,h};
+Point(4) = {0,26/f,0,h};
 Point(5) = {0,3.25/f,0,h};
 
 // =====================================CURVES
@@ -24,10 +24,11 @@ Plane Surface(1) = {1};
 
 
 Physical Surface(1) = {1};
-Physical Line("WALL") = {3,4};
+Physical Line("WALL") = {4};
 Physical Line("INLET") = {5};
 Physical Line("OUTLET") = {2};
 Physical Line("SYMMETRY") = {1};
+Physical Line("FARFIELD") = {3};
 
 
 // 1: MeshAdapt, 2: Automatic, 3: Initial mesh only, 5: Delaunay, 6: Frontal-Delaunay, 7: BAMG, 8: Frontal-Delaunay for Quads, 9: Packing of Parallelograms

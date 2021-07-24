@@ -57,8 +57,8 @@ Plane Surface(1) = {1};
 Plane Surface(3) = {3};
 
 Physical Surface(1) = {1,2,3};
-Physical Line("WALL") = {4,5,10,11};
-//Physical Line("FARFIELD") = {10,11};
+Physical Line("WALL") = {4,5};
+Physical Line("FARFIELD") = {10,11};
 Physical Line("INLET") = {6};
 Physical Line("OUTLET") = {8,9};
 Physical Line("SYMMETRY") = {1,2,7};

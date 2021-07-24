@@ -1,0 +1,4 @@
+TITLE = "Inflow Span-wise Kinematic Values. iExtIter = 2000 "
+VARIABLES =
+           "SpanWise Value[m]"        "iSpan"              "Normal Mach[-]"          "Tangential Mach[-]"       "3rd Component Mach[-]"              "Mach Module[-]"        "Normal Velocity[m/s]"    "Tangential Velocity[m/s]" "3rd Component Velocity[m/s]"        "Velocity Module[m/s]"    "Absolute Flow Angle[deg]"    "Relative Flow Angle[deg]"
+            0.000000000000e+00              0            3.589736290875e-01           -2.594829627157e-03            2.594829627157e-03            0.000000000000e+00            1.326704320985e+02           -9.590040603599e-01            1.326738981187e+02            0.000000000000e+00           -4.141535333075e-01           -4.141535333075e-01
